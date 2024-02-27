@@ -1,0 +1,35 @@
+name: CI
+run-name: 🚀 Unit test for ${{ github.ref }} (${{ github.run_id }}) 🚀
+
+on: [push]
+
+jobs:
+  autotests:
+    name: Run lab tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: ℹ ️ Clone repository
+        uses: actions/checkout@v4.1.1
+ 
+      - name: ℹ ️ Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          
+      - name: 1️⃣  Run tests for Ex1
+        run: cd ./ex1 && ./gradlew test -i
+        continue-on-error: true
+          
+      - name: 2️⃣  Run tests for Ex2
+        run: cd ./ex2 && ./gradlew test -i
+        continue-on-error: true
+          
+      - name: 3️⃣  Run tests for Ex3
+        run: cd ./ex3 && ./gradlew test -i
+        continue-on-error: true
+          
+      - name: 4️⃣  Run tests for Ex4
+        run: cd ./ex4 && ./gradlew test -i
+        continue-on-error: true
+
