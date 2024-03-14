@@ -18,7 +18,8 @@ class ModifyJavaProgramTest {
     @Test
     fun testReplacePublicWithPrivate() {
         val testFile = File("src/test/resources/test_java_program.java")
-        testFile.writeText(testJavaProgram)
+        // CI has problems, so we have a file already prepared
+        //testFile.writeText(testJavaProgram)
 
         val inputFilePath = testFile.absolutePath
         val outputDirectory = "src/test/resources/output"
@@ -41,7 +42,7 @@ class ModifyJavaProgramTest {
         assertEquals(expectedModifiedLines.split('\n'), modifiedLines)
 
         // Clean up
-        testFile.delete()
+        //testFile.delete()
         outputFile.delete()
         File(outputDirectory).delete()
     }
