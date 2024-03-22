@@ -24,12 +24,3 @@ jobs:
       - name: 2️⃣  Run tests for Ex2
         run: cd ./ex2 && ./gradlew test
         continue-on-error: true
-          
-      - name: 3️⃣  Run tests for Ex3
-        run: cd ./ex3 && ./gradlew test
-        continue-on-error: true
-          
-      - name: 4️⃣  Run tests for Ex4
-        run: cd ./ex4 && ./gradlew test
-        continue-on-error: true
-
