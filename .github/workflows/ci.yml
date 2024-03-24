@@ -33,3 +33,18 @@ jobs:
         run: cd ./ex4 && ./gradlew test
         continue-on-error: true
 
+      - name: 1️⃣  Run tests for Ex5
+        run: cd ./ex5 && ./gradlew test
+        continue-on-error: true
+
+      - name: 2️⃣  Run tests for Ex6
+        run: cd ./ex6 && ./gradlew test
+        continue-on-error: true
+
+      - name: 3️⃣  Run tests for Ex7
+        run: cd ./ex7 && ./gradlew test
+        continue-on-error: true
+
+      - name: 4️⃣  Run tests for Ex8
+        run: cd ./ex8 && ./gradlew test
+        continue-on-error: true
